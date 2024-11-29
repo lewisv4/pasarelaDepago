@@ -1,0 +1,89 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-bg: #242424;
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-selected: #646cff;
+  --color-hover: #535bf2;
+  --color-light-bg: #f9f9f9;
+  --color-border: #646cff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.payment-container {
+  text-align: center;
+}
+
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.plan-card {
+  background-color: var(--color-light-bg);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 300px;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  border-color: var(--color-hover);
+}
+
+.plan-card.selected {
+  background-color: var(--color-selected);
+  color: white;
+}
+
+.plan-card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.plan-card .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.plan-card .description {
+  margin: 0.5rem 0;
+}
+
+.plan-card .features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.plan-card .features li {
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: var(--color-bg);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+}
